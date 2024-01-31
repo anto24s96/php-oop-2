@@ -1,14 +1,16 @@
 <?php 
     /* DEFINISCO LA CLASSE PRODOTTO */
     class Product
-    {
+    {   
+        public $brand;
         public $name;
         public $image;
         public $price;
         public $description;
 
-        public function __construct($_name, $_image, $_price, $_description)
-        {
+        public function __construct($_brand, $_name, $_image, $_price, $_description)
+        {   
+            $this->brand = $_brand;
             $this->name = $_name;
             $this->image = $_image;
             $this->price = $_price;
@@ -27,4 +29,44 @@
         }
     }
 
+    /* DEFINISCO LA SOTTOCLASSE CIBO */
+    class Food extends Product
+    {
+        public $food_type;
+        public $category;
+
+        public function __construct($_brand, $_name, $_image, $_price, $_description, $_category, $_food_type)
+        {
+            parent::__construct($_brand, $_name, $_image, $_price, $_description, $_category);
+            $this->food_type = $_food_type;
+            $this->category = $_category;
+
+        }
+    }
+
+    class Toy extends Product
+    {
+        public $material;
+        public $category;
+
+        public function __construct($_brand, $_name, $_image, $_price, $_description, $_category, $_material)
+        {
+            parent::__construct($_brand, $_name, $_image, $_price, $_description, $_category);
+            $this->material = $_material;
+            $this->category = $_category;
+        }
+    }
+
+    class Accessories extends Product
+    {
+        public $category;
+
+        public function __construct($_brand, $_name, $_image, $_price, $_description, $_category)
+        {
+            parent::__construct($_brand, $_name, $_image, $_price, $_description, $_category);
+            $this->category = $_category;
+        }
+    }
+
+    
 ?>
