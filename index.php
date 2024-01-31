@@ -109,13 +109,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="my-3 text-center fw-bolder">Animals E-Commerce</h1>
+                <h1 class="my-5 text-center fw-bolder">Animals E-Commerce</h1>
             </div>
         </div>
         <div class="row py-3">
-            <h1 class="fw-bolder">Food</h1>
+            <h1 class="fw-bolder text-center mb-3">Food</h1>
             <?php foreach($products_food as $food) { ?>
-                <div class="col-4 py-3">
+                <div class="col-4 py-3 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $food->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
@@ -129,9 +129,9 @@
             <?php } ?>
         </div>
         <div class="row py-3">
-            <h1 class="fw-bolder">Toy</h1>
+            <h1 class="fw-bolder text-center mb-3">Toy</h1>
             <?php foreach($products_toy as $toy) { ?>
-                <div class="col-4 py-3">
+                <div class="col-4 py-3 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $toy->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
@@ -145,9 +145,9 @@
             <?php } ?>
         </div>
         <div class="row py-3">
-            <h1 class="fw-bolder">Accessories</h1>
+            <h1 class="fw-bolder text-center mb-3">Accessories</h1>
             <?php foreach($products_accessories as $accessories) { ?>
-                <div class="col-4 py-3">
+                <div class="col-4 py-3 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $accessories->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
