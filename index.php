@@ -87,10 +87,76 @@
     $product_8 = new Toy('Trixie','Topini di peluche','https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', 2.49, 'Gioco per gatti Topini peluche, un grande classico per il divertimento di Micio!', $cat ,'Peluche');
 
 
-    /* CREO UN ARRAY CON ALL'INTERNO I PRODOTTI */
-    $products = [
-        $product_1, $product_2, $product_3, $product_4, $product_5, $product_6, $product_7, $product_8
-    ];
+    /* CREO DEGLI ARRAY DIVERSI PER CATEGORIA CON ALL'INTERNO I PRODOTTI */
+    $products_food = [$product_1, $product_2, $product_3, $product_4];
+    $products_accessories = [$product_5, $product_6];
+    $products_toy = [$product_7, $product_8];
 
-    var_dump($products);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals E-Commerce</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="my-3 text-center fw-bolder">Animals E-Commerce</h1>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="fw-bolder">Food</h1>
+            <?php foreach($products_food as $food) { ?>
+                <div class="col-4 py-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo $food->image ?>" alt="image" class="card-img-top">
+                        <div class="card-body">
+                            <div class="card-title text-center"><?php echo $food->name ?></div>
+                            <div class="card-text">Descrizione: <?php echo $food->description ?></div>
+                            <div class="card-text"><?php echo $food->food_type ?></div>
+                            <div class="card-text">Prezzo: <?php echo $food->price ?>€</div>
+                        </div>
+                    </div>                    
+                </div>
+            <?php } ?>
+        </div>
+        <div class="row">
+            <h1 class="fw-bolder">Toy</h1>
+            <?php foreach($products_toy as $toy) { ?>
+                <div class="col-4 py-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo $toy->image ?>" alt="image" class="card-img-top">
+                        <div class="card-body">
+                            <div class="card-title text-center"><?php echo $toy->name ?></div>
+                            <div class="card-text">Descrizione: <?php echo $toy->description ?></div>
+                            <div class="card-text"><?php echo $toy->material ?></div>
+                            <div class="card-text">Prezzo: <?php echo $toy->price ?>€</div>
+                        </div>
+                    </div>                    
+                </div>
+            <?php } ?>
+        </div>
+        <div class="row">
+            <h1 class="fw-bolder">Accessories</h1>
+            <?php foreach($products_accessories as $accessories) { ?>
+                <div class="col-4 py-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo $accessories->image ?>" alt="image" class="card-img-top">
+                        <div class="card-body">
+                            <div class="card-title text-center"><?php echo $accessories->name ?></div>
+                            <div class="card-text"> Descrizione: <?php echo $accessories->description ?></div>
+                            <div class="card-text">Prezzo: <?php echo $accessories->price ?>€</div>
+                        </div>
+                    </div>                    
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</body>
+</html>
