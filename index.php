@@ -102,56 +102,58 @@
     <title>Animals E-Commerce</title>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="bg-dark text-white">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="my-3 text-center fw-bolder">Animals E-Commerce</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row py-3">
             <h1 class="fw-bolder">Food</h1>
             <?php foreach($products_food as $food) { ?>
                 <div class="col-4 py-3">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $food->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
-                            <div class="card-title text-center"><?php echo $food->name ?></div>
-                            <div class="card-text">Descrizione: <?php echo $food->description ?></div>
-                            <div class="card-text"><?php echo $food->food_type ?></div>
-                            <div class="card-text">Prezzo: <?php echo $food->price ?>€</div>
+                            <div class="card-title text-center fw-bolder"><?php echo $food->name ?></div>
+                            <div class="card-text mt-3">Descrizione: <?php echo $food->description ?></div>
+                            <div class="card-text mt-2">Tipologia: <?php echo $food->food_type ?></div>
+                            <div class="card-text mt-2">Prezzo: <?php echo $food->price ?>€</div>
                         </div>
                     </div>                    
                 </div>
             <?php } ?>
         </div>
-        <div class="row">
+        <div class="row py-3">
             <h1 class="fw-bolder">Toy</h1>
             <?php foreach($products_toy as $toy) { ?>
                 <div class="col-4 py-3">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $toy->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
-                            <div class="card-title text-center"><?php echo $toy->name ?></div>
-                            <div class="card-text">Descrizione: <?php echo $toy->description ?></div>
-                            <div class="card-text"><?php echo $toy->material ?></div>
-                            <div class="card-text">Prezzo: <?php echo $toy->price ?>€</div>
+                            <div class="card-title text-center fw-bolder"><?php echo $toy->name ?></div>
+                            <div class="card-text mt-3">Descrizione: <?php echo $toy->description ?></div>
+                            <div class="card-text mt-2">Materiale: <?php echo $toy->material ?></div>
+                            <div class="card-text mt-2">Prezzo: <?php echo $toy->price ?>€</div>
                         </div>
                     </div>                    
                 </div>
             <?php } ?>
         </div>
-        <div class="row">
+        <div class="row py-3">
             <h1 class="fw-bolder">Accessories</h1>
             <?php foreach($products_accessories as $accessories) { ?>
                 <div class="col-4 py-3">
                     <div class="card" style="width: 18rem;">
                         <img src="<?php echo $accessories->image ?>" alt="image" class="card-img-top">
                         <div class="card-body">
-                            <div class="card-title text-center"><?php echo $accessories->name ?></div>
-                            <div class="card-text"> Descrizione: <?php echo $accessories->description ?></div>
-                            <div class="card-text">Prezzo: <?php echo $accessories->price ?>€</div>
+                            <div class="card-title text-center fw-bolder"><?php echo $accessories->name ?></div>
+                            <div class="card-tex mt-3"> Descrizione: <?php echo $accessories->description ?></div>
+                            <div class="card-text mt-2">Prezzo: <?php echo $accessories->price ?>€</div>
                         </div>
                     </div>                    
                 </div>
