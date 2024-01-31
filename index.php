@@ -29,7 +29,7 @@
         }
     }
 
-    /* DEFINISCO LA SOTTOCLASSE CIBO */
+    /* DEFINISCO LA SUB CLASSE CIBO */
     class Food extends Product
     {
         public $food_type;
@@ -44,6 +44,7 @@
         }
     }
 
+    /* DEFINISCO LA SUB CLASSE GIOCO */
     class Toy extends Product
     {
         public $material;
@@ -57,6 +58,7 @@
         }
     }
 
+    /* DEFINISCO LA SUBCLASSE ACCESSORI */
     class Accessories extends Product
     {
         public $category;
@@ -68,5 +70,5 @@
         }
     }
 
-    
+
 ?>
